@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+/** @format */
+
+import "./App.css";
+import UseState1 from "./useState/useState1";
+import CustomStateHook from "./useState/customFormState";
+import Effect from "./useEffect/effectComponent";
+import RefComponent from "./useRef/RefComponent";
+import CallBackComponent from "./useCallback/callBackComponent";
+import MemoComponent from "./useMemo/memoComponent";
+import ComA from "./useContext/comA";
+import { UserProvider } from "./useContext/userContext";
+import Couter from "./useReducer/couter";
+import ComponentA from "./useReducer/componentA";
+import ReducerProvider from "./useReducer/reducerContext";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		// <UserProvider>
+		// 	<ComA />
+		// </UserProvider>
+		<ReducerProvider>
+			<ComponentA />
+		</ReducerProvider>
+	);
 }
 
 export default App;
